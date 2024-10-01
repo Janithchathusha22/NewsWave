@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Card(props) {
+  const [buttonText, setButtonText] = useState("Click Me");
+
+  const handleButtonClick = () => {
+    setButtonText("Text Changed");
+  };
+
   return (
     <div className="everything-card mt-10">
       <div className="everything-card flex flex-wrap p-5 gap-1 mb-1">
@@ -77,6 +83,16 @@ function Card(props) {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Add the button */}
+      <div className="mt-4">
+        <button
+          onClick={handleButtonClick}
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+        >
+          {buttonText}
+        </button>
       </div>
     </div>
   );

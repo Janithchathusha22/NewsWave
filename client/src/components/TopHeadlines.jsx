@@ -57,13 +57,13 @@ function TopHeadlines() {
           data.length > 0 ? (
             data.map((element, index) => (
               <EverythingCard
-                key={index}
+                key={ndex}
                 title={element.title}
                 description={element.description}
                 imgUrl={element.urlToImage}
                 publishedAt={element.publishedAt}
                 url={element.url}
-                author={element.author}
+                author={element.author}i
                 source={element.source.name}
               />
             ))
